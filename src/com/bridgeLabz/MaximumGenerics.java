@@ -8,8 +8,8 @@ package com.bridgeLabz;
  *
  */
 /*
- * UC2 Given 3 Floats find the maximum Use Integer Object and compareTo method
- * to test the maximum number
+ * UC3 Given 3 Strings find the maximum
+ * E.g. Apple Peach Banana
  */
 public class MaximumGenerics<T> {
 
@@ -22,8 +22,8 @@ public class MaximumGenerics<T> {
 		this.z = z;
 	}
 
-	public static Float testMaximum(Float x, Float y, Float z) {
-		Float max = x;
+	public static String testMaximum(String x, String y, String z) {
+		String max = x;
 		if (y.compareTo(max) > 0) {
 			max = y;
 		}
@@ -41,9 +41,9 @@ public class MaximumGenerics<T> {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Float xF = 5.1F, yF = 4.1F, zF = 3.1F;
-		MaximumGenerics<Float> maximum = new MaximumGenerics<Float>(zF, zF, zF);
-		MaximumGenerics.testMaximum(xF, yF, zF);
+		String xStr = "Peach", yStr = "Banana", zStr ="Apple" ;
+		MaximumGenerics<String> maximum = new MaximumGenerics<String>(xStr, yStr, zStr);
+		MaximumGenerics.testMaximum(xStr, yStr, zStr);
 
 	}
 
