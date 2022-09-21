@@ -8,7 +8,7 @@ package com.bridgeLabz;
  *
  */
 /*
- * UC1 Given 3 Floats find the maximum Use Integer Object and compareTo method
+ * UC2 Given 3 Floats find the maximum Use Integer Object and compareTo method
  * to test the maximum number
  */
 public class MaximumGenerics<T> {
