@@ -1,0 +1,50 @@
+/**
+ * 
+ */
+package com.bridgeLabz;
+
+/**
+ * @author hp
+ *
+ */
+/*
+ * UC1 Given 3 Integers find the maximum Use Integer Object and compareTo method
+ * to test the maximum number
+ */
+public class MaximumGenerics<T> {
+
+	T x, y, z;
+
+	public MaximumGenerics(T x, T y, T z) {
+		// TODO Auto-generated constructor stub
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+
+	public static Integer testMaximum(Integer x, Integer y, Integer z) {
+		Integer max = x;
+		if (y.compareTo(max) > 0) {
+			max = y;
+		}
+		if (z.compareTo(max) > 0) {
+			max = z;
+		}
+
+		printMax(x, y, z, max);
+		return max;
+	}
+
+	public static <T> void printMax(T x, T y, T z, T max) {
+		System.out.printf("Max of %s,%s & %s is %s\n", x, y, z, max);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Integer xInt = 5, yInt = 4, zInt = 3;
+		MaximumGenerics<Integer> maximum = new MaximumGenerics<Integer>(zInt, zInt, zInt);
+		MaximumGenerics.testMaximum(xInt, yInt, zInt);
+
+	}
+
+}
