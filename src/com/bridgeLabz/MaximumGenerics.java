@@ -21,6 +21,30 @@ public class MaximumGenerics<T> {
 		this.y = y;
 		this.z = z;
 	}
+	public static Integer testMaximum(Integer x, Integer y, Integer z) {
+		Integer max = x;
+		if (y.compareTo(max) > 0) {
+			max = y;
+		}
+		if (z.compareTo(max) > 0) {
+			max = z;
+		}
+
+		printMax(x, y, z, max);
+		return max;
+	}
+	public static Float testMaximum(Float x, Float y, Float z) {
+		Float max = x;
+		if (y.compareTo(max) > 0) {
+			max = y;
+		}
+		if (z.compareTo(max) > 0) {
+			max = z;
+		}
+
+		printMax(x, y, z, max);
+		return max;
+	}
 
 	public static String testMaximum(String x, String y, String z) {
 		String max = x;
@@ -41,8 +65,14 @@ public class MaximumGenerics<T> {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Integer xInt = 5, yInt = 4, zInt =3 ;
+		Float xF = 5.1F, yF = 4.1F, zF =3.1F ;
 		String xStr = "Peach", yStr = "Banana", zStr ="Apple" ;
-		MaximumGenerics<String> maximum = new MaximumGenerics<String>(xStr, yStr, zStr);
+		MaximumGenerics<Integer> maximum = new MaximumGenerics<Integer>(xInt, yInt, zInt);
+		MaximumGenerics.testMaximum(xInt, yInt, zInt);
+		MaximumGenerics<Float> maximum1 = new MaximumGenerics<Float>(xF, yF, zF);
+		MaximumGenerics.testMaximum(xF, yF, zF);
+		MaximumGenerics<String> maximum2 = new MaximumGenerics<String>(xStr, yStr, zStr);
 		MaximumGenerics.testMaximum(xStr, yStr, zStr);
 
 	}
