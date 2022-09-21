@@ -8,7 +8,7 @@ package com.bridgeLabz;
  *
  */
 /*
- * UC1 Given 3 Integers find the maximum Use Integer Object and compareTo method
+ * UC1 Given 3 Floats find the maximum Use Integer Object and compareTo method
  * to test the maximum number
  */
 public class MaximumGenerics<T> {
@@ -22,8 +22,8 @@ public class MaximumGenerics<T> {
 		this.z = z;
 	}
 
-	public static Integer testMaximum(Integer x, Integer y, Integer z) {
-		Integer max = x;
+	public static Float testMaximum(Float x, Float y, Float z) {
+		Float max = x;
 		if (y.compareTo(max) > 0) {
 			max = y;
 		}
@@ -41,9 +41,9 @@ public class MaximumGenerics<T> {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Integer xInt = 5, yInt = 4, zInt = 3;
-		MaximumGenerics<Integer> maximum = new MaximumGenerics<Integer>(zInt, zInt, zInt);
-		MaximumGenerics.testMaximum(xInt, yInt, zInt);
+		Float xF = 5.1F, yF = 4.1F, zF = 3.1F;
+		MaximumGenerics<Float> maximum = new MaximumGenerics<Float>(zF, zF, zF);
+		MaximumGenerics.testMaximum(xF, yF, zF);
 
 	}
 
