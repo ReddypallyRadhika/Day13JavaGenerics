@@ -8,10 +8,9 @@ package com.bridgeLabz;
  *
  */
 /*
- * UC3-refactor1 Refactor to create Generic Class to take in 3 variables of
- * Generic Type
- * Ensure the Generic Type extends Comparable
-- Write parameter constructor
+ * UC5
+ * Extend the max method to also print the max to std out using Generic Method 
+ * - Write printMax Generic Method which is internally called from testMaximum
  */
 public class MaximumGenerics<T extends Comparable<T>> {
 
